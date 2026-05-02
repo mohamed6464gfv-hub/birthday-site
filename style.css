@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  background: black;
+  overflow: hidden;
+  font-family: Arial;
+  text-align: center;
+  color: white;
+}
+
+/* زرار البداية */
+#enterBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 40px;
+  font-size: 20px;
+  background: gold;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* النص */
+#introText {
+  font-size: 40px;
+  margin-top: 50px;
+  opacity: 0;
+  transition: 1s;
+}
+
+/* 3D */
+.scene {
+  width: 200px;
+  height: 200px;
+  margin: 100px auto;
+  perspective: 1000px;
+}
+
+#carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 20s linear infinite;
+}
+
+#carousel img {
+  position: absolute;
+  width: 120px;
+  height: 150px;
+  left: 40px;
+  top: 20px;
+  border-radius: 15px;
+}
+
+@keyframes spin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+/* رسالة */
+#message {
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+/* قلوب */
+.heart {
+  position: absolute;
+  color: red;
+  font-size: 20px;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  0% { top: -10px; }
+  100% { top: 100vh; }
+}
